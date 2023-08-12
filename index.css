@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 1px solid red;
+}
+
+.navlinks{
+    list-style-type: none;
+    display: flex;
+    justify-content: end;
+    gap: 3rem;
+    padding: 12px;
+}
+
+.navlinks:last-child{
+    padding-right: 3rem;
+}
