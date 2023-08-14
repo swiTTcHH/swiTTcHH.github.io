@@ -1,18 +1,57 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    /* outline: 1px solid red; */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  /* outline: 1px solid red; */
+  /* color-scheme: dark light; */
 }
 
-.navlinks{
-    list-style-type: none;
-    display: flex;
-    justify-content: end;
-    gap: 3rem;
-    padding: 12px;
+.colorr{
+  color: var(--text);
 }
 
-.navlinks:last-child{
-    padding-right: 3rem;
+:root {
+    --font: custom;
+    background-color: #072c6b;
+    --text: rgb(231, 227, 227);
+}
+
+@font-face {
+  font-family: custom;
+  src: url("assets/font/static/Oswald-Medium.ttf");
+}
+
+header{
+  background-color: white;
+  padding-top: 0.7rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-content: center;
+}
+
+.brand{
+  padding-left: 5rem;
+}
+
+.navlinks {
+  list-style-type: none;
+  display: flex;
+  justify-content: end;
+  gap: 3rem;
+  padding: 12px;
+}
+
+.navlinks:last-child {
+  padding-right: 3rem;
+}
+
+.skilltree {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 60%;
+}
+
+.identity {
+  font-family: var(--font), "Courier New", Courier, monospace;
 }
