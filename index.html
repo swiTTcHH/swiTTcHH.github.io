@@ -4,7 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HELLO</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/uikit@3.16.24/dist/css/uikit.min.css"
+    />
+
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/91dbe294a3.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.24/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.24/dist/js/uikit-icons.min.js"></script>
   </head>
   <body>
     <header>
@@ -13,30 +27,38 @@
           <li><a href="#">Home</a></li>
           <li><a href="#">Projects</a></li>
           <li><a href="#aboutme">About</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">Languages</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
       <section class="hero">
-        <h4>Hello! my name is <span class="brand">swiTcH</span></h4>
+        <h4>
+          Hello! my name is
+          <span class="brand" data-actual="David!" data-value="swiTcH"
+            >David!</span
+          >
+        </h4>
         <h1>I am a Frontend Developer</h1>
+        <p class="talk">
+          I am a Resourceful professional successful in developing innovative
+          web designs and features with solid knowledge frontend web development
+          with ability to quickly learn new technologies. .
+        </p>
 
         <button class="contact"><a href="#contact">Get in touch</a></button>
       </section>
 
-      <section class="talk">
-        <p id="aboutme">
-          I am a Resourceful professional successful in developing innovative
-          web designs and features with solid knowledge frontend web development
-          with ability to quickly learn new technologies. I am a hardworking,
-          passionate and goal driven frontend developer. During my time as a
-          student of Obafemi Awolowo University, Ile-Ife, I quickly came to
-          realize that the course I was studying, Microbiology, has no market in
-          Nigeria and decided to invest in my passion instead. I have been in
-          tech for quite some time and I have come to realize that it is not an easy road. It is a road of constant learning and self improvement.
+      <section id="aboutme">
+        <p>
+          I am a hardworking, passionate and goal driven frontend developer.
+          During my time as a student of Obafemi Awolowo University, Ile-Ife, I
+          quickly came to realize that the course I was studying, Microbiology,
+          has no market in Nigeria and decided to invest in my passion instead.
+          I have been in tech for quite some time and I have come to realize
+          that it is not an easy road. It is a road of constant learning and
+          self improvement
         </p>
       </section>
 
@@ -45,19 +67,108 @@
         <p>I am knowledgeable in the following technologies</p>
 
         <div class="skilltree">
-            <h1>HTML</h1>
-            <h1>CSS</h1>
-            <h1>JavaScript</h1>
-            <h1>React</h1>
-            <h1>Tailwind CSS</h1>
-            <h1>PHP</h1>
-            <h1></h1>
-            <h1></h1>
-
+          <h1>
+            <i class="fa-brands fa-html5" style="color: #dd4b25"></i>
+          </h1>
+          <h1><i class="fa-brands fa-css3-alt" style="color: #2862e9"></i></h1>
+          <h1><i class="fa-brands fa-js" style="color: #efd81c"></i></h1>
+          <h1><i class="fa-brands fa-react" style="color: #5dd2f2"></i></h1>
+          <h1>
+            <svg
+              fill="#07B6D5"
+              width="64px"
+              height="64px"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              xml:space="preserve"
+              transform="rotate(0)"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M12 6.036c-2.667 0-4.333 1.325-5 3.976 1-1.325 2.167-1.822 3.5-1.491.761.189 1.305.738 1.906 1.345C13.387 10.855 14.522 12 17 12c2.667 0 4.333-1.325 5-3.976-1 1.325-2.166 1.822-3.5 1.491-.761-.189-1.305-.738-1.907-1.345-.98-.99-2.114-2.134-4.593-2.134zM7 12c-2.667 0-4.333 1.325-5 3.976 1-1.326 2.167-1.822 3.5-1.491.761.189 1.305.738 1.907 1.345.98.989 2.115 2.134 4.594 2.134 2.667 0 4.333-1.325 5-3.976-1 1.325-2.167 1.822-3.5 1.491-.761-.189-1.305-.738-1.906-1.345C10.613 13.145 9.478 12 7 12z"
+                ></path>
+              </g>
+            </svg>
+          </h1>
+          <h1><i class="fa-brands fa-php" style="color: #7377ad"></i></h1>
+          <h1></h1>
+          <h1></h1>
         </div>
+      </section>
+
+      <section id="contact">
+        <a href="mailto:dvdokpeta@gmail.com"
+          ><i class="fa-solid fa-envelope" style="color: #6a6d8d"></i
+        ></a>
+        <a href="tel:+2348161592708"><i class="fa-solid fa-phone"></i></a>
+        <a href="#" target="_blank" rel="noopener noreferrer"
+          ><i class="fa-brands fa-whatsapp"></i
+        ></a>
       </section>
     </main>
 
     <footer></footer>
+
+    <script>
+      const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+      let interval = null;
+
+      document.querySelector(".brand").onmouseover = (event) => {
+        let iteration = 0;
+
+        clearInterval(interval);
+
+        interval = setInterval(() => {
+          event.target.innerText = event.target.innerText
+            .split("")
+            .map((letter, index) => {
+              if (index < iteration) {
+                return event.target.dataset.value[index];
+              }
+
+              return letters[Math.floor(Math.random() * 26)];
+            })
+            .join("");
+
+          if (iteration >= event.target.dataset.value.length) {
+            clearInterval(interval);
+          }
+
+          iteration += 1 / 3;
+        }, 30);
+      };
+      
+      document.querySelector(".brand").onmouseout = (e) => {
+        let iteration = 0
+        interval = setInterval(() => {
+          e.target.innerText = e.target.innerText
+            .split("")
+            .map((letter, index) => {
+              if (index < iteration) {
+                return e.target.dataset.actual[index];
+              }
+
+              return letters[Math.floor(Math.random() * 26)];
+            })
+            .join("");
+
+            if (iteration >= e.target.dataset.actual.length) {
+            clearInterval(interval);
+          }
+          iteration += 1 / 3;
+          }, 30)
+        
+        // e.target.innerText = "David.";
+      }
+    </script>
   </body>
 </html>
