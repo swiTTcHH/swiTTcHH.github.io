@@ -7,14 +7,14 @@
   /* color-scheme: dark light; */
 }
 
-.colorr{
+.colorr {
   color: var(--text);
 }
 
 :root {
-    --font: custom;
-    background-color: #072c6b;
-    --text: rgb(231, 227, 227);
+  --font: custom;
+  background-color: #072c6b;
+  --text: rgb(231, 227, 227);
 }
 
 @font-face {
@@ -22,7 +22,7 @@
   src: url("assets/font/static/Oswald-Medium.ttf");
 }
 
-header{
+header {
   background-color: white;
   padding-top: 0.7rem;
   display: grid;
@@ -30,7 +30,7 @@ header{
   place-content: center;
 }
 
-.brand{
+.brand {
   padding-left: 5rem;
 }
 
@@ -50,8 +50,37 @@ header{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   width: 60%;
+  margin: 0 auto;
+  gap: 2rem;
 }
 
 .identity {
   font-family: var(--font), "Courier New", Courier, monospace;
 }
+
+main {
+  width: 70%;
+  margin: 10px auto;
+}
+
+.contact {
+  padding: 0.34em 2em;
+  display: inline-block;
+  background: #0651d3;
+  border-radius: 20px;
+  box-shadow: 2px 2px 5px 0 black, -1px -1px 2px 0 white;
+  border: blue;
+  text-decoration: none;
+  color: white;
+}
+
+.contact:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.contact:active{
+  background: transparent;
+  box-shadow: 0.7px 0.2px 3px 0 black, -0.4px -0.4px 1px 0 white;
+}
+
