@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>swiTcH</title>
-    <link rel="stylesheet" href="nav.css">
     <!-- <link rel="stylesheet" href="index.css" /> -->
+    <link rel="stylesheet" href="nav.css">
 
 
     <!-- typing animation -->
@@ -360,11 +360,19 @@
 
       toggle.addEventListener("click",() => {
         navMenu.classList.toggle("active");
-        // navMenu.classList.add("active");
+        navMenu.classList.add("active");
+        navMenu.removeAttribute("style")
       })
+      
+      close.addEventListener("click",(e) => {
+        e.preventDefault();
+        navMenu.style.animation= "remove"
+        navMenu.style.animationDuration= "280ms";
+        navMenu.style.animationTimingFunction = "linear";
 
-      close.addEventListener("click",() => {
-        navMenu.classList.remove("active");
+        setTimeout(() =>{
+          navMenu.classList.remove("active");
+        }, 300)
       });
     </script>
 

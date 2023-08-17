@@ -31,8 +31,7 @@ nav.active{
     max-height: 100dvh;
     display: grid;
     align-items: center;
-    animation: slide 1s linear;
-    transition: all 1s linear;
+    animation: slide 0.5s linear;
 }
 
 .navlinks{
