@@ -3,23 +3,25 @@
   padding: 0;
   box-sizing: border-box;
   color: white;
-  /* outline: 1px solid red; */
   /* color-scheme: dark light; */
 }
 
-.colorr {
-  color: var(--text);
-}
+
 
 :root {
   --font: custom;
   background-color: #072c6b;
   --text: rgb(231, 227, 227);
+  --bg: #072c6b;
 }
 
 @font-face {
   font-family: custom;
   src: url("assets/font/static/Oswald-Medium.ttf");
+}
+
+.colorr {
+  color: var(--text);
 }
 
 header {
@@ -40,6 +42,21 @@ header {
   justify-content: end;
   gap: 3rem;
   padding: 12px;
+}
+
+.navlinks a{
+  text-decoration: none;
+  color: #072c6b;
+}
+
+.navlinks a:hover{
+  text-decoration: none;
+  padding: 5px 10px;
+  background-color: var(--bg);
+  color: white;
+  border: var(--bg);
+  border-radius: 9px;
+
 }
 
 .navlinks:last-child {
@@ -77,10 +94,15 @@ main {
 .contact:hover {
   text-decoration: none;
   color: white;
+  background: transparent;
 }
 
 .contact:active{
   background: transparent;
   box-shadow: 0.7px 0.2px 3px 0 black, -0.4px -0.4px 1px 0 white;
+}
+
+.aboutsection{
+  margin-top: 1rem;
 }
 
