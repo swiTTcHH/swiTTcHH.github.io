@@ -6,8 +6,6 @@
   /* color-scheme: dark light; */
 }
 
-
-
 :root {
   --font: custom;
   background-color: #072c6b;
@@ -30,6 +28,14 @@ header {
   display: grid;
   grid-template-columns: 1fr 1fr;
   place-content: center;
+}
+
+.logo img{
+  width: 9%;
+}
+
+#toggle{
+  display: none;
 }
 
 .brand {
@@ -106,3 +112,117 @@ main {
   margin-top: 1rem;
 }
 
+@media screen and (max-width: 800px){
+  header{
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      position: relative;
+  }
+
+  .logo img{
+    width: 100%;
+  }
+
+  #toggle{
+    display: block;
+    color: var(--bg);
+    text-align: end;
+    margin-right: 3rem;
+    transform: translateY(calc(50% - 21px));
+  }
+
+  .fa-bars{
+    color: var(--bg);
+    font-size: x-large;
+  }
+
+  nav{
+      /* animation: remove 250ms linear; */
+      display: none;
+  }
+
+  nav.active{
+      background-color: var(--text);
+      right: 0;
+      top: 0;
+      position: fixed;
+      width: 70vw;
+      max-width: 70dvw;
+      height: 100vh;
+      max-height: 100dvh;
+      display: grid;
+      align-items: center;
+      animation: slide 0.3s linear;
+      z-index: 100000;
+    }
+
+    .navlinks{
+      list-style-type: none;
+      display: grid;
+      gap: 4rem;
+      width: 100%;
+      margin-top: 1rem;
+      justify-content: normal;
+    }
+
+    li{
+      text-align: center;
+    }
+
+    #close{
+      color: var(--bg);
+      position: absolute;
+      top: 1.5625em;
+      right: 2.1875em;
+      padding: 1em;
+      width: fit-content;
+      font-family: sans-serif;
+      border: 1px solid var(--bg);
+
+    }
+
+    .navlinks a{
+      display: inline-block;
+      color: var(--bg);
+      width: 100%;
+      text-decoration: none;
+      font-size: larger;
+      padding: 1rem;
+  }
+
+  .navlinks a:hover{
+    background-color: var(--bg);
+    color:var(--text);
+  }
+
+  .navlinks a:active{
+    background-color: var(--bg);
+    color:var(--text);
+  }
+
+  .navlinks a:focus{
+    background-color: var(--bg);
+    color:var(--text);
+  }
+
+
+  @keyframes slide {
+      0%{
+          transform: translateX(100%);
+      }
+
+      100%{
+          transform: translateX(0%);
+      }
+  }
+
+  @keyframes remove {
+    0%{
+      transform: translateX(0%);
+    }
+
+    100%{
+      transform: translateX(100%);
+    }
+  }
+}

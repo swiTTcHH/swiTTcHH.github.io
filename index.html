@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>swiTcH</title>
-    <!-- <link rel="stylesheet" href="index.css" /> -->
-    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="index.css" />
+    <!-- <link rel="stylesheet" href="nav.css"> -->
 
 
     <!-- typing animation -->
@@ -20,7 +20,7 @@
   <body>
     <header>
       <div class="brand">
-        <a href="index.html" class="logo"><img src="assets/images/vertical-logo.png" alt="logo" width="9%"></a>
+        <a href="index.html" class="logo"><img src="assets/images/vertical-logo.png" alt="logo" ></a>
       </div>
 
       <div id="toggle"><i class="fa-solid fa-bars"></i></div>
@@ -199,7 +199,6 @@
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
               xml:space="preserve"
-              transform="rotate(0)"
             >
               <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
               <g
@@ -357,11 +356,13 @@
       const navMenu = document.querySelector("nav");
       const toggle = document.querySelector("#toggle");
       const close = document.querySelector("#close");
+      const body = document.querySelector("main");
 
       toggle.addEventListener("click",() => {
         navMenu.classList.toggle("active");
         navMenu.classList.add("active");
         navMenu.removeAttribute("style")
+        body.style.opacity = 0.5
       })
       
       close.addEventListener("click",(e) => {
@@ -369,8 +370,9 @@
         navMenu.style.animation= "remove"
         navMenu.style.animationDuration= "280ms";
         navMenu.style.animationTimingFunction = "linear";
-
+        
         setTimeout(() =>{
+          body.style.opacity = 1
           navMenu.classList.remove("active");
         }, 300)
       });
@@ -379,7 +381,7 @@
     <!-- typing animation! -->
   <script>
     var typed = new Typed('.identity', {
-      strings: ['a Frontend Developer', 'a Backend Developer', 'a Wordpress &amp; other CMS expert', 'swiTcH Digital Solutions'],
+      strings: ['a Backend Developer', 'a Wordpress &amp; other CMS expert', 'a Frontend Developer', 'swiTcH Digital Solutions'],
       typeSpeed: 150,
       loop: true,
       backSpeed : 100
