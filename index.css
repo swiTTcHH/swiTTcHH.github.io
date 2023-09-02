@@ -18,6 +18,10 @@
   src: url("assets/font/static/Oswald-Medium.ttf");
 }
 
+h1{
+  font-size: 26px;
+}
+
 .colorr {
   color: var(--text);
 }
